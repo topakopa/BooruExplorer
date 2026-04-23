@@ -17,7 +17,6 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          pip install pyside6-deploy # Или другие инструменты сборки
       - name: Build with Nuitka
         run: |
           python -m pyside6-deploy main.py
