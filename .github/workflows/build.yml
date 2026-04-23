@@ -34,11 +34,11 @@ jobs:
       - name: Build with pyside6-deploy
         run: |
           if [ "${{ matrix.os }}" = "windows-latest" ]; then
-            .venv\Scripts\activate
+            source .venv/Scripts/activate
           else
             source .venv/bin/activate
           fi
-          pyside6-deploy mainwindow.py
+          pyside6-deploy mainwindow.py --linux-icon=shish.png
         shell: bash
 
       - name: Upload artifact
