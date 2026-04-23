@@ -23,7 +23,7 @@ jobs:
       - name: Activate venv and install dependencies
         run: |
           if [ "${{ matrix.os }}" = "windows-latest" ]; then
-            .venv\Scripts\activate
+            source .venv/Scripts/activate
           else
             source .venv/bin/activate
           fi
