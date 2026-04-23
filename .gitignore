@@ -21,6 +21,7 @@ core
 !core/
 tags
 tmp
+pysidedeploy.spec
 .DS_Store
 .directory
 *.debug
