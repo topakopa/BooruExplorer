@@ -45,4 +45,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: my-app-${{ matrix.os }}
-          path: ./build/   # путь к собранному бинарнику (зависит от конфига pyside6-deploy)
+          path: ./deployment/   # путь к собранному бинарнику (зависит от конфига pyside6-deploy)
