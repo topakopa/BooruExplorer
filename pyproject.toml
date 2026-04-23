@@ -1,5 +1,5 @@
 [project]
-name = "PySide Widgets Project"
+name = "BooruExplorer"
 
 [tool.pyside6-project]
 files = ["api.py", "form.ui", "mainwindow.py"]
