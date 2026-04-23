@@ -38,7 +38,7 @@ jobs:
           else
             source .venv/bin/activate
           fi
-          pyside6-deploy mainwindow.py --linux-icon=shish.png
+          pyside6-deploy mainwindow.py
         shell: bash
 
       - name: Upload artifact
