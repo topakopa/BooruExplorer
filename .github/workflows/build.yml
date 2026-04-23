@@ -38,7 +38,7 @@ jobs:
           else
             source .venv/bin/activate
           fi
-          pyside6-deploy mainwindow.py --keep-deployment-files
+          pyside6-deploy mainwindow.py
         shell: bash
 
       - name: Debug - List files
@@ -55,4 +55,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: my-app-${{ matrix.os }}
-          path: ./deployment
+          path: ./

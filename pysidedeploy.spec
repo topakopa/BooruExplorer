@@ -68,7 +68,7 @@ macos.permissions =
 mode = onefile
 
 # specify any extra nuitka arguments
-extra_args = --noinclude-qt-translations
+extra_args = --noinclude-qt-translations --macos-app-icon=shish.icns --windows-icon-from-ico=shish.ico
 
 [buildozer]
 
