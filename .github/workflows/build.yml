@@ -45,12 +45,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: my-app-${{ matrix.os }}
-              path: |
-      ./deployment/*.bin
-      ./deployment/*.exe
-      ./deployment/*.app
-      ./*.bin
-      ./*.exe
-      ./*.app
-      ./mainwindow*
-      ./pyside_app_demo*
+          path: |
+            ./deployment/*.bin
+            ./deployment/*.exe
+            ./*.bin
+            ./*.exe
+            ./mainwindow*
