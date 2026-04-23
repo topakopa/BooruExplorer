@@ -20,6 +20,7 @@
 core
 !core/
 tags
+tmp
 .DS_Store
 .directory
 *.debug
@@ -77,6 +78,7 @@ CMakeLists.txt.user*
 # Directories with generated files
 .moc/
 .obj/
+tmp/
 .pch/
 .rcc/
 .uic/
