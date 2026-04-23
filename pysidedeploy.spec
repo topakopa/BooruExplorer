@@ -10,7 +10,7 @@ project_dir = .
 input_file = mainwindow.py
 
 # directory where the executable output is generated
-exec_directory = .
+exec_directory = ./build
 
 # path to the project file relative to project_dir
 project_file = pyproject.toml

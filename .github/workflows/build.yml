@@ -1,5 +1,5 @@
 name: Build Application
-on: [push] # Запускать при каждом пуше
+on: [push]  # запускать при каждом пуше
 
 jobs:
   build:
@@ -7,21 +7,42 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
     runs-on: ${{ matrix.os }}
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Set up Python
+
+      - name: Set up Python 3.13
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11' # Стабильная версия
-      - name: Install dependencies
+          python-version: '3.13'
+
+      - name: Create virtual environment
+        run: python -m venv .venv
+
+      - name: Activate venv and install dependencies
         run: |
+          if [ "${{ matrix.os }}" = "windows-latest" ]; then
+            .venv\Scripts\activate
+          else
+            source .venv/bin/activate
+          fi
+          pip install --upgrade pip
           pip install -r requirements.txt
-      - name: Build with Nuitka
+        shell: bash
+
+      - name: Build with pyside6-deploy
         run: |
-          python -m pyside6-deploy main.py
+          if [ "${{ matrix.os }}" = "windows-latest" ]; then
+            .venv\Scripts\activate
+          else
+            source .venv/bin/activate
+          fi
+          pyside6-deploy mainwindow.py
+        shell: bash
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: my-app-${{ matrix.os }}
-          path: ./deployment/ # Путь к собранному файлу
+          path: ./build/   # путь к собранному бинарнику (зависит от конфига pyside6-deploy)
