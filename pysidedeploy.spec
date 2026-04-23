@@ -18,6 +18,16 @@ project_file = pyproject.toml
 # application icon
 icon = ./shish.png
 
+[python]
+
+# python path
+python_path = ./.venv/bin/python3.13
+
+# python packages to install
+packages = Nuitka==2.7.11
+
+# buildozer = for deploying Android application
+android_packages = buildozer==1.5.0,cython==0.29.33
 
 [qt]
 
@@ -36,13 +46,23 @@ modules = Core,DBus,Gui,Widgets
 # for qt plugins used in android application see [android][plugins]
 plugins = accessiblebridge,egldeviceintegrations,generic,iconengines,imageformats,platforminputcontexts,platforms,platforms/darwin,platformthemes,styles,wayland-decoration-client,wayland-graphics-integration-client,wayland-shell-integration,xcbglintegrations
 
+[android]
+
+# path to pyside wheel
+wheel_pyside =
+
+# path to shiboken wheel
+wheel_shiboken =
+
+# plugins to be copied to libs folder of the packaged application. comma separated
+plugins =
 
 [nuitka]
 
 # usage description for permissions requested by the app as found in the info.plist file
 # of the app bundle. comma separated
 # eg = extra_args = --show-modules --follow-stdlib
-macos.permissions = 
+macos.permissions =
 
 # mode of using nuitka. accepts standalone or onefile. default = onefile
 mode = onefile

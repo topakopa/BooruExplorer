@@ -41,6 +41,16 @@ jobs:
           pyside6-deploy mainwindow.py
         shell: bash
 
+      - name: Debug - List files
+        run: |
+            echo "=== Current directory ==="
+            ls -la
+            echo "=== Check deployment folder ==="
+            ls -la ./deployment || echo "deployment folder not found"
+            echo "=== Searching for executables ==="
+            find . -type f \( -name "*.bin" -o -name "*.exe" -o -name "BooruExplorer" \) 2>/dev/null
+        shell: bash
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
