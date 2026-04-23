@@ -3,6 +3,8 @@ import json
 import urllib.parse
 import urllib.request
 import os
+import ssl
+import certifi
 from rich.progress import Progress
 
 class rule34api:
@@ -25,8 +27,9 @@ class rule34api:
         return f'https://{self.domein}/index.php?page=dapi&s=post&q=index&limit={post_count}&pid={page}&tags={tags}&api_key={self.api_key}&user_id={self.user_id}&json=1'
 
     def _fetch_json(self, url: str) -> list:
+        context = ssl.create_default_context(cafile=certifi.where())
         request = urllib.request.Request(url)
-        response = urllib.request.urlopen(request)
+        response = urllib.request.urlopen(request, context=context)
         resp = response.read().decode('utf-8')
         try:
             return json.loads(resp)
