@@ -21,6 +21,8 @@ core
 !core/
 tags
 tmp
+output
+config.json
 .DS_Store
 .directory
 *.debug
@@ -72,9 +74,9 @@ CMakeLists.txt.user*
 
 # Binaries
 # --------
-*.dll
-*.exe
-*.bin
+# *.dll
+# *.exe
+# *.bin
 
 # Directories with generated files
 .moc/
