@@ -1,1 +1,9 @@
-{"debug": 0, "domein": "api.rule34.xxx", "api_key": "3a7f599ba278b6571a48d2a2c0327946b4e30fe4af9e93d793cef6238b2785173aa5b66b682e176eb8b47048ce027eb00d44be8d30812225cc03dea42f62e6c7", "user_id": "2921984", "temp_opened_files_folder": "/tmp/booruexplorer/openedfiles", "temp_thumbnails_folder": "/tmp/booruexplorer/thumb", "download_folder": "output"}
+{
+    "debug": 0,
+    "domein": "safebooru.org",
+    "api_key": "",
+    "user_id": "",
+    "temp_opened_files_folder": "/tmp/booruexplorer/openedfiles",
+    "temp_thumbnails_folder": "/tmp/booruexplorer/thumb",
+    "download_folder": "output"
+}

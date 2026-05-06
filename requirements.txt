@@ -1,4 +1,3 @@
 PySide6
-rich.progress
 certifi
 imageio

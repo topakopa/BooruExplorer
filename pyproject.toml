@@ -2,4 +2,4 @@
 name = "BooruExplorer"
 
 [tool.pyside6-project]
-files = ["api.py", "console.py", "form.ui", "mainwindow.py"]
+files = ["api.py", "console.py", "form.ui", "mainwindow.py", "dinamicThings.py"]
