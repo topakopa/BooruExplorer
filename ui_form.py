@@ -77,7 +77,6 @@ class Ui_MainWindow(object):
         self.listWidget.setResizeMode(QListView.ResizeMode.Adjust)
         self.listWidget.setGridSize(QSize(300, 300))
         self.listWidget.setViewMode(QListView.ViewMode.IconMode)
-        self.listWidget.setItemAlignment(Qt.AlignmentFlag.AlignTop)
 
         self.horizontalLayout_2.addWidget(self.listWidget)
 
